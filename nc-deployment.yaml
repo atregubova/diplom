@@ -23,11 +23,11 @@ spec:
         - name: DEBUG
           value: "false"
         - name: NEXTCLOUD_URL
-          value: http://<someDomain>
+          value: http://10.0.2.15
         - name: NEXTCLOUD_ADMIN_USER
           value: admin
         - name: NEXTCLOUD_ADMIN_PASSWORD
-          value: <someNextCloudAdminPass>
+          value: password
         - name: NEXTCLOUD_UPLOAD_MAX_FILESIZE
           value: 4G
         - name: NEXTCLOUD_MAX_FILE_UPLOADS
@@ -38,7 +38,7 @@ spec:
         - name: MYSQL_HOST
           value: db
         - name: MYSQL_PASSWORD
-          value: <someMysqlPass>
+          value: password
         - name: MYSQL_USER
           value: nextcloud
         name: nc
@@ -55,4 +55,4 @@ spec:
       volumes:
         - name: html
           hostPath:
-            path: "/home/<someFolderLocation>/nc-pv"
+            path: "/home/anastasia/nc-deployment/nc-pv"
