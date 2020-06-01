@@ -21,12 +21,12 @@ spec:
         - name: MYSQL_DATABASE
           value: nextcloud
         - name: MYSQL_PASSWORD
-          value: <someMySqlPass>
+          value: password
         - name: MYSQL_USER
           value: nextcloud
         - name: MYSQL_ROOT_PASSWORD
-          value: <someMySqlRootPass>
-        image: mysql
+          value: password
+        image: mariadb
         name: db
         volumeMounts:
         - mountPath: /var/lib/mysql
@@ -35,4 +35,4 @@ spec:
       volumes:
       - name: db
         hostPath:
-          path: "/home/<someFolderLocation>/db-pv"
+          path: "/home/anastasia/nc-deployment/db-pv"
