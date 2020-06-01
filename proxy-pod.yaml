@@ -36,15 +36,15 @@ spec:
   volumes:
     - name: certs
       hostPath:
-        path: "/home/<someFolderLocation>/certs-pv"
+        path: "/home/anastasia/nc-deployment/certs-pv"
     - name: docker-socket
       hostPath:
         path: "/var/run/docker.sock"
         type: Socket
     - name: nginx-config
       hostPath:
-        path: "/home/<someFolderLocation>/nginx.conf"
+        path: "/home/anastasia/nc-deployment/nginx.conf"
         type: File
     - name: nginx-logs
       hostPath:
-        path: "/home/<someFolderLocation>/nginx-logs"
+        path: "/home/anastasia/nc-deployment/nginx-logs"
