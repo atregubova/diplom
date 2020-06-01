@@ -9,15 +9,15 @@ spec:
   containers:
   - env:
     - name: SSL_SUBJECT
-      value: <my-server-name>
+      value: 10.0.2.15
     - name: CA_SUBJECT
-      value: <my-email>
+      value: a.tregubova@list.ru
     - name: SSL_KEY
-      value: /certs/<my-server-name>.key
+      value: /certs/10.0.2.15.key
     - name: SSL_CSR
-      value: /certs/<my-server-name>.csr
+      value: /certs/10.0.2.15.csr
     - name: SSL_CERT
-      value: /certs/<my-server-name>.crt
+      value: /certs/10.0.2.15.crt
     name: omgwtfssl
     image: paulczar/omgwtfssl
     terminationMessagePath: /dev/termination-log
@@ -28,4 +28,4 @@ spec:
   volumes:
     - name: certs
       hostPath:
-        path: "/home/<someFolderLocation>/certs-pv"
+        path: "/home/anastasia/nc-deployment/certs-pv"
